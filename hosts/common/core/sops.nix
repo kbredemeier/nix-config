@@ -10,14 +10,13 @@
   ...
 }:
 let
-  sopsFolder = builtins.toString inputs.nix-secrets;
-  secretsFile = "${sopsFolder}/secrets.yaml";
+  sopsFolder = builtins.toString inputs.nix-secrets + "/sops";
 in
 {
   #the import for inputs.sops-nix.nixosModules.sops is handled in hosts/common/core/default.nix so that it can be dynamically input according to the platform
 
   sops = {
-    defaultSopsFile = "${secretsFile}";
+    defaultSopsFile = "${sopsFolder}/${config.hostSpec.hostName}.yaml";
     validateSopsFiles = false;
     age = {
       # automatically import host SSH keys as age keys
