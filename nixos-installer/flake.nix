@@ -55,7 +55,7 @@
 
         # host = newConfig "name" disk" "swapSize"
         # Swap size is in GiB
-        hostname1 = newConfig "hostname1" "/dev/nvme0n1" 16;
+        hornburg = newConfig "hornburg" "/dev/nvme0n1" 16;
       };
     };
 }
