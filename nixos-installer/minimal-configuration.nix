@@ -19,8 +19,8 @@
   hostSpec = {
     isMinimal = lib.mkForce true;
     hostName = "installer";
-    # FIXME(starter): Add your primary username or whatever user you want to use for installation
-    username = "hiro";
+    # Add your primary username or whatever user you want to use for installation
+    username = "kb";
   };
 
   fileSystems."/boot".options = [ "umask=0077" ]; # Removes permissions and security warnings.
