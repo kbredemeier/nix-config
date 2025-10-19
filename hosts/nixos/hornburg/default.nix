@@ -62,7 +62,8 @@
       # Add or remove any optional host-level configuration files the host will use
       # The following are for example sake only and are not necessarily required.
       "hosts/common/optional/services/openssh.nix" # allow remote SSH access
-      "hosts/common/optional/services/greetd.nix" # allow remote SSH access
+      "hosts/common/optional/services/bluetooth.nix"
+      "hosts/common/optional/services/greetd.nix"
       "hosts/common/optional/audio.nix" # pipewire and cli controls
       "hosts/common/optional/stylix.nix"
       "hosts/common/optional/hyprland.nix"
