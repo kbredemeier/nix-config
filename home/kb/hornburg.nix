@@ -26,6 +26,7 @@
           "desktops" # default is hyprland
           "media"
           "sops.nix"
+          "xdg.nix"
         ])
     )
   );
