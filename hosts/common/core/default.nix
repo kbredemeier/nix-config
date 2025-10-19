@@ -28,8 +28,7 @@ in
       "hosts/common/core/sops.nix" # Core because it's used for backups, mail
       "hosts/common/core/ssh.nix"
       #"hosts/common/core/services" # uncomment this line if you add any modules to services directory
-      "hosts/common/users/primary"
-      "hosts/common/users/primary/${platform}.nix"
+      "hosts/common/users"
     ])
   ];
 
@@ -39,6 +38,7 @@ in
   # FIXME(starter): modify the hostSpec options below to define values that are common across all hosts
   # such as the username and handle of the primary user (see also `nix-config/hosts/common/users/primary`)
   hostSpec = {
+    primaryUsername = "kb";
     username = "kb";
     handle = "kbredemeier";
     # FIXME(starter): modify the attribute sets hostSpec will inherit from your nix-secrets.

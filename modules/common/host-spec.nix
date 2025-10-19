@@ -11,6 +11,10 @@
       freeformType = with lib.types; attrsOf str;
       options = {
         # Data variables that don't dictate configuration settings
+        primaryUsername = lib.mkOption {
+          type = lib.types.str;
+          description = "The primary username of the host";
+        };
         username = lib.mkOption {
           type = lib.types.str;
           description = "The username of the host";
@@ -66,6 +70,11 @@
         };
 
         # Configuration Settings
+        users = lib.mkOption {
+          type = lib.types.listOf lib.types.str;
+          description = "An attribute set of all users on the host";
+          default = [ config.hostSpec.username ];
+        };
         isMinimal = lib.mkOption {
           type = lib.types.bool;
           default = false;
