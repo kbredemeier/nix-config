@@ -38,7 +38,7 @@
     #
     # ========== Misc Inputs ==========
     #
-    # inputs.stylix.nixosModules.stylix
+    inputs.stylix.nixosModules.stylix
 
     (map lib.custom.relativeToRoot [
       #
@@ -64,6 +64,7 @@
       "hosts/common/optional/services/openssh.nix" # allow remote SSH access
       "hosts/common/optional/services/greetd.nix" # allow remote SSH access
       "hosts/common/optional/audio.nix" # pipewire and cli controls
+      "hosts/common/optional/stylix.nix"
       "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/wayland.nix"
     ])

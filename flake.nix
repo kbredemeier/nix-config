@@ -158,6 +158,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Theming
+    stylix.url = "github:danth/stylix/release-25.05";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
     #
@@ -170,6 +171,9 @@
     nix-secrets = {
       url = "git+ssh://git@github.com/kbredemeier/nix-secrets.git?shallow=1";
       inputs = { };
+    };
+    nix-assets = {
+      url = "git+ssh://git@github.com/kbredemeier/nix-assets.git";
     };
   };
 }

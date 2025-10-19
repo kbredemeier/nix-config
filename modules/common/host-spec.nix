@@ -3,6 +3,7 @@
   config,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 {
@@ -121,6 +122,11 @@
           default = false;
           description = "Used to indicate a host that wants auto styling like stylix";
         };
+        theme = lib.mkOption {
+          type = lib.types.str;
+          default = "dracula";
+          description = "The theme to use for the host (stylix, vscode, neovim, etc)";
+        };
         useNeovimTerminal = lib.mkOption {
           type = lib.types.bool;
           default = false;
@@ -145,6 +151,11 @@
           type = lib.types.str;
           default = "1";
           description = "Used to indicate what scaling to use. Floating point number";
+        };
+        wallpaper = lib.mkOption {
+          type = lib.types.path;
+          default = "${inputs.nix-assets}/images/wallpapers/2560x1440/international_space_station.jpg";
+          description = "Path to wallpaper to use for system";
         };
         useWayland = lib.mkOption {
           type = lib.types.bool;
