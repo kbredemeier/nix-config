@@ -146,6 +146,11 @@
           default = "1";
           description = "Used to indicate what scaling to use. Floating point number";
         };
+        useWayland = lib.mkOption {
+          type = lib.types.bool;
+          default = false;
+          description = "Indicate a host that uses Wayland";
+        };
       };
     };
   };

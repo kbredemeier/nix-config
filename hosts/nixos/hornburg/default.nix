@@ -62,8 +62,10 @@
       # Add or remove any optional host-level configuration files the host will use
       # The following are for example sake only and are not necessarily required.
       "hosts/common/optional/services/openssh.nix" # allow remote SSH access
+      "hosts/common/optional/services/greetd.nix" # allow remote SSH access
       "hosts/common/optional/audio.nix" # pipewire and cli controls
-      "hosts/common/optional/xfce.nix" # lightweight x-based window manager
+      "hosts/common/optional/hyprland.nix"
+      "hosts/common/optional/wayland.nix"
     ])
   ];
 

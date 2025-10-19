@@ -42,6 +42,11 @@ in
     sessionVariables = {
       NH_FLAKE = "$HOME/src/nix/nix-config";
       SHELL = "bash";
+      TERM = "ghostty";
+      TERMINAL = "ghostty";
+      VISUAL = "nvim";
+      EDITOR = "nvim";
+      MANPAGER = "batman"; # see ./cli/bat.nix
     };
   };
 

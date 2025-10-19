@@ -157,6 +157,8 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Theming
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
     #
     # ========= Personal Repositories =========
