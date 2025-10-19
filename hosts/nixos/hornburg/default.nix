@@ -68,6 +68,7 @@
       "hosts/common/optional/stylix.nix"
       "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/wayland.nix"
+      "hosts/common/optional/neovim.nix"
     ])
   ];
 
