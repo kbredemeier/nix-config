@@ -79,6 +79,9 @@
   # for examples.
   hostSpec = {
     hostName = "hornburg";
+    isMobile = lib.mkForce true;
+    hdr = lib.mkForce true;
+    wifi = lib.mkForce true;
   };
 
   networking = {
