@@ -162,6 +162,15 @@
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
     #
+    # ========= Programs =========
+    #
+    nvim = {
+      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+      # url = "github:nix-community/neovim-nightly-overlay";
+      url = "github:kbredemeier/neovim";
+    };
+
+    #
     # ========= Personal Repositories =========
     #
     # Private secrets repo.  See ./docs/secretsmgmt.md
