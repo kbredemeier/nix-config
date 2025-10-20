@@ -14,8 +14,7 @@
       drun-match-fields = "name";
       drun-display-format = "{name}";
       #FIXME not working
-      drun-search-paths = "/home/ta/.nix-profile/share/applciations,/home/ta/.nix-profile/share/wayland-sessions";
-
+      # drun-search-paths = "/home/kb/.nix-profile/share/applciations,/home/kb/.nix-profile/share/wayland-sessions";
     };
   };
 }

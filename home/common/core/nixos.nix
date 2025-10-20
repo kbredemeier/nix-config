@@ -6,10 +6,10 @@
   ...
 }:
 {
-  # imports = [
-  #   # FIXME: Move this to trash module that we enable for users instead
-  #   ./timers/trash-empty.nix
-  # ];
+  imports = [
+    # FIXME: Move this to trash module that we enable for users instead
+    ./timers/trash-empty.nix
+  ];
   home = {
     packages = lib.optionals (config.hostSpec.isProduction) (
       builtins.attrValues {
