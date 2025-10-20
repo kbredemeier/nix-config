@@ -25,6 +25,7 @@
           "comms"
           "desktops" # default is hyprland
           "media"
+          "tools"
           "sops.nix"
           "xdg.nix"
         ])
