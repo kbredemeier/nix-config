@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }:
 {
@@ -14,6 +13,13 @@
     pkgs.rmtrash # temporarily cache deleted files for recovery
     pkgs.fzf # fuzzy finder used by initExtra.zsh
   ];
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = import ./starship.nix { inherit config; };
+  };
+
   programs.zoxide = {
     enable = true;
     enableBashIntegration = true;
@@ -44,16 +50,6 @@
 
     plugins = [
       {
-        name = "powerlevel10k-config";
-        src = ./p10k;
-        file = "p10k.zsh.theme"; # NOTE: Don't use .zsh because of shfmt barfs on it, and can't ignore files
-      }
-      {
-        name = "zsh-powerlevel10k";
-        src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
-        file = "powerlevel10k.zsh-theme";
-      }
-      {
         name = "you-should-use";
         src = "${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use";
       }
@@ -68,18 +64,6 @@
           sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
         };
       }
-    ];
-
-    initContent = lib.mkMerge [
-      (lib.mkBefore ''
-        # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-        # Initialization code that may require console input (password prompts, [y/n]
-        # confirmations, etc.) must go above this block; everything else may go below.
-        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-        fi
-      '')
-      (lib.mkAfter (lib.readFile ./zshrc))
     ];
 
     oh-my-zsh = {
