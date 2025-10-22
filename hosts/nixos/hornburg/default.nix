@@ -69,6 +69,7 @@
       "hosts/common/optional/hyprland.nix"
       "hosts/common/optional/wayland.nix"
       "hosts/common/optional/neovim.nix"
+      "hosts/common/optional/yubikey.nix"
     ])
   ];
 
