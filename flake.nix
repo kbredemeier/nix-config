@@ -159,6 +159,7 @@
     };
     # Theming
     stylix.url = "github:danth/stylix/release-25.05";
+    catppuccin.url = "github:catppuccin/nix";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
     #
