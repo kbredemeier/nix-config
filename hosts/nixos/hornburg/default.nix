@@ -69,6 +69,7 @@
       "hosts/common/optional/services/openssh.nix" # allow remote SSH access
       "hosts/common/optional/stylix.nix"
       "hosts/common/optional/wayland.nix"
+      "hosts/common/optional/yubikey.nix"
 
     ])
   ];
