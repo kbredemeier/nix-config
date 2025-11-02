@@ -22,10 +22,16 @@
       };
 
       newConfig =
-        name: disk: swapSize:
+        name: disk: swapSize: useLuks: useImpermanence:
         (
           let
-            diskSpecPath = ../hosts/common/disks/btrfs-disk.nix;
+            diskSpecPath =
+              if useLuks && useImpermanence then
+                ../hosts/common/disks/btrfs-luks-impermanence-disk.nix
+              else if !useLuks && useImpermanence then
+                ../hosts/common/disks/btrfs-impermanence-disk.nix
+              else
+                ../hosts/common/disks/btrfs-disk.nix;
           in
           nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
@@ -55,7 +61,7 @@
 
         # host = newConfig "name" disk" "swapSize"
         # Swap size is in GiB
-        hornburg = newConfig "hornburg" "/dev/nvme0n1" 16;
+        hornburg = newConfig "hornburg" "/dev/nvme0n1" 16 true true;
       };
     };
 }

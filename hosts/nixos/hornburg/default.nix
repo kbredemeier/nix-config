@@ -24,7 +24,7 @@
     # ========== Disk Layout ==========
     #
     inputs.disko.nixosModules.disko
-    (lib.custom.relativeToRoot "hosts/common/disks/btrfs-disk.nix")
+    (lib.custom.relativeToRoot "hosts/common/disks/btrfs-luks-impermanence-disk.nix")
     # IMPORTANT: nix-config-starter assumes a single disk per host. If you require more disks, you
     # must modify or create new dikso specs.
     {
