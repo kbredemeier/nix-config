@@ -41,8 +41,14 @@ in
     ];
     sessionVariables = {
       NH_FLAKE = "$HOME/src/nix/nix-config";
-      SHELL = "bash";
+      SHELL = "zsh";
+      TERM = "ghostty";
+      TERMINAL = "ghostty";
+      VISUAL = "nvim";
+      EDITOR = "nvim";
+      MANPAGER = "batman"; # see ./cli/bat.nix
     };
+    preferXdgDirectories = true; # whether to make programs use XDG directories whenever supported
   };
 
   home.packages = builtins.attrValues {
