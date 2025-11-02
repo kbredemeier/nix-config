@@ -16,9 +16,7 @@ in
       "modules/home"
     ])
     ./${platform}.nix
-
-    # FIXME(starter): add/edit as desired
-    ./bash.nix
+    ./zsh
     ./darwin.nix
     ./direnv.nix
     ./fonts.nix

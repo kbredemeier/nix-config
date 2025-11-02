@@ -107,4 +107,14 @@ in
       ];
     };
   };
+
+  #
+  # ========== Basic Shell Enablement ==========
+  #
+  # On darwin it's important this is outside home-manager
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    promptInit = "source ''${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+  };
 }
