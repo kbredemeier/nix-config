@@ -5,6 +5,8 @@
 { inputs, ... }:
 
 let
+  neovim = inputs.nvim.overlays.default;
+
   # Add in custom packages from this config
   additions =
     final: prev:
@@ -48,5 +50,6 @@ in
     // (modifications final prev)
     // (linuxModifications final prev)
     // (stable-packages final prev)
-    // (unstable-packages final prev);
+    // (unstable-packages final prev)
+    // (neovim final prev);
 }
