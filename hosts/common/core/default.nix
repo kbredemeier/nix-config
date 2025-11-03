@@ -28,7 +28,7 @@ in
       "hosts/common/core/sops.nix" # Core because it's used for backups, mail
       "hosts/common/core/ssh.nix"
       #"hosts/common/core/services" # uncomment this line if you add any modules to services directory
-      "hosts/common/users/primary"
+      "hosts/common/users"
       "hosts/common/users/primary/${platform}.nix"
     ])
   ];
