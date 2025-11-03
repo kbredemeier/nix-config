@@ -18,6 +18,7 @@ in
     ./${platform}.nix
     ./zsh
     ./bat.nix
+    ./btop.nix
     ./darwin.nix
     ./direnv.nix
     ./fonts.nix
