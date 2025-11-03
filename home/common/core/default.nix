@@ -17,6 +17,7 @@ in
     ])
     ./${platform}.nix
     ./zsh
+    ./bat.nix
     ./darwin.nix
     ./direnv.nix
     ./fonts.nix
