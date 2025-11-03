@@ -68,8 +68,9 @@
       "hosts/common/optional/services/greetd.nix"
       "hosts/common/optional/services/openssh.nix" # allow remote SSH access
       "hosts/common/optional/stylix.nix"
-      "hosts/common/optional/wayland.nix"
+      "hosts/common/optional/obsidian.nix"
       "hosts/common/optional/thunar.nix"
+      "hosts/common/optional/wayland.nix"
       "hosts/common/optional/yubikey.nix"
 
     ])
