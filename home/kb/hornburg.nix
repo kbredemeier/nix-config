@@ -11,9 +11,10 @@
       ]
       ++ (map (f: "home/common/optional/${f}") [
         "browsers"
-        "desktops"
         "comms"
+        "desktops"
         "media"
+        "tools"
         "sops.nix"
       ])
     )
